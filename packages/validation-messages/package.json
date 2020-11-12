@@ -1,0 +1,38 @@
+{
+  "name": "@valueadd/validation-messages",
+  "version": "2.7.0",
+  "description": "`npm install @valueadd/validation-messages`",
+  "author": {
+    "email": "contact@valueadd.pl",
+    "name": "ValueAdd sp. z o.o.",
+    "url": "https://valueadd.pl/"
+  },
+  "homepage": "https://github.com/valueadd-poland/ng-packages",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/ng-packages.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "ng-packagr -p package.json",
+    "preversion": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/ng-packages/issues"
+  },
+  "devDependencies": {
+    "@angular/forms": "^8.2.0"
+  },
+  "peerDependencies": {
+    "@angular/forms": "^8.2.0",
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "rxjs": "^6.5.2"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  }
+}

@@ -5,8 +5,9 @@
 
 A collection of packages, modules and utilities for JavaScript developers.
 
-| Package                                         | Description                                         | Version                                                                                                                 | Changelog                                       |
-| ----------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| Package             | Description                                   | Version                                                                                                                                   | Changelog                                                |
+| ------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Validation messages | Lib to handle validation messages in Angular. | [![version](https://img.shields.io/npm/v/@valueadd/validation-messages.svg)](https://www.npmjs.com/package/@valueadd/validation-messages) | [changelog](./packages/validation-messages/CHANGELOG.md) |
 
 ## Development
 
