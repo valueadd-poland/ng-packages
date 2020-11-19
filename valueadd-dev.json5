@@ -44,7 +44,11 @@
         "test",
       ],
     ],
-    "scope-enum": [2, "always", ["release", "validation-messages"]],
+    "scope-enum": [
+      2,
+      "always",
+      ["release", "validation-messages", "linking-tool"],
+    ],
   },
   prettier: {
     // extensions to check with prettier
