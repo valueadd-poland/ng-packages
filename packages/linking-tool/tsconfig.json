@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "tsconfig",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "rootDir": "src/",
+    "sourceMap": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "types": [],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
+  },
+  "include": [
+    "src/lib/schematics/**/*",
+    "src/lib/schematics/**/*.ts",
+    "src/lib/schematics/**/*.json"
+  ],
+  "exclude": ["../../node_modules", "../../tmp", "**/*.spec.ts"],
+  "extends": "../../tsconfig.json",
+  "types": ["jest"]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@valueadd/linking-tool",
+  "version": "2.7.0",
+  "schematics": "./lib/schematics/collection.json",
+  "description": "Generate links for routing across the app",
+  "homepage": "https://github.com/valueadd-poland/ng-packages",
+  "author": {
+    "email": "contact@valueadd.pl",
+    "name": "ValueAdd sp. z o.o.",
+    "url": "https://valueadd.pl/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/ng-packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/ng-packages/issues"
+  },
+  "keywords": [
+    "schematics",
+    "routing",
+    "linking tool",
+    "generate links"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "ng-packagr -p package.json && tsc -p tsconfig.lib.json",
+    "preversion": "npm run build"
+  },
+  "devDependencies": {
+    "@angular/forms": "^8.2.0",
+    "@angular/router": "^8.2.0",
+    "ts-morph": "^4.0.1",
+    "@types/jest": "^26.0.15"
+  },
+  "peerDependencies": {
+    "@angular/forms": "^8.2.0",
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "rxjs": "^6.5.2"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  }
+}
