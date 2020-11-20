@@ -1,0 +1,48 @@
+{
+  "name": "@valueadd/translations-finder",
+  "version": "2.7.0",
+  "description": "The tool which will help you to find missing translations",
+  "homepage": "https://github.com/valueadd-poland/ng-packages",
+  "main": "./src/lib/translations-finder.util.js",
+  "types": "./src/lib/translations-finder.util.d.ts",
+  "author": {
+    "email": "contact@valueadd.pl",
+    "name": "ValueAdd sp. z o.o.",
+    "url": "https://valueadd.pl/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueadd-poland/ng-packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/valueadd-poland/ng-packages/issues"
+  },
+  "keywords": [
+    "translations finder",
+    "translations",
+    "translation keys",
+    "loco translation keys finder",
+    "ngx-translate"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "ng-packagr -p package.json",
+    "preversion": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "ts-morph": "^4.0.1"
+  },
+  "peerDependencies": {
+    "@angular/forms": "^8.2.0",
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "rxjs": "^6.5.2"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  }
+}
