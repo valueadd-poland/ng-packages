@@ -47,7 +47,7 @@
     "scope-enum": [
       2,
       "always",
-      ["release", "validation-messages", "linking-tool"],
+      ["release", "validation-messages", "linking-tool", "translation-finder"],
     ],
   },
   prettier: {
