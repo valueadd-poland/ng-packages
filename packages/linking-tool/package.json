@@ -29,15 +29,15 @@
     "preversion": "npm run build"
   },
   "devDependencies": {
-    "@angular/forms": "^8.2.0",
-    "@angular/router": "^8.2.0",
-    "ts-morph": "^4.0.1",
-    "@types/jest": "^26.0.15"
+    "@angular/forms": "^11.0.2",
+    "@angular/router": "^11.0.2",
+    "@types/jest": "^26.0.15",
+    "ts-morph": "^4.0.1"
   },
   "peerDependencies": {
-    "@angular/forms": "^8.2.0",
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0",
+    "@angular/forms": "^11.0.2",
+    "@angular/common": "^11.0.2",
+    "@angular/core": "^11.0.2",
     "rxjs": "^6.5.2"
   },
   "ngPackage": {

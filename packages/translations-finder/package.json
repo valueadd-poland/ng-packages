@@ -35,9 +35,9 @@
     "ts-morph": "^4.0.1"
   },
   "peerDependencies": {
-    "@angular/forms": "^8.2.0",
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0",
+    "@angular/forms": "^11.0.2",
+    "@angular/common": "^11.0.2",
+    "@angular/core": "^11.0.2",
     "rxjs": "^6.5.2"
   },
   "ngPackage": {

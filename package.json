@@ -13,14 +13,14 @@
     "test": "lerna run test"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.802.0",
-    "@angular/cli": "^8.2.0",
-    "@angular/common": "^8.2.0",
-    "@angular/compiler": "^8.2.0",
-    "@angular/compiler-cli": "^8.2.0",
-    "@angular/core": "^8.2.0",
-    "@angular/platform-browser": "^8.2.0",
-    "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular-devkit/build-angular": "~0.1100.2",
+    "@angular/cli": "^11.0.2",
+    "@angular/common": "^11.0.2",
+    "@angular/compiler": "^11.0.2",
+    "@angular/compiler-cli": "^11.0.2",
+    "@angular/core": "^11.0.2",
+    "@angular/platform-browser": "^11.0.2",
+    "@angular/platform-browser-dynamic": "^11.0.2",
     "@types/jest": "^25.2.3",
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.11.8",
@@ -32,11 +32,11 @@
     "jest": "^25.5.4",
     "jest-preset-angular": "^8.3.2",
     "lerna": "^3.22.1",
-    "ng-packagr": "^5.4.3",
+    "ng-packagr": "^11.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "ts-jest": "^25.5.1",
-    "typescript": "3.5.3",
+    "typescript": "4.0.5",
     "zone.js": "~0.10.1"
   }
 }
