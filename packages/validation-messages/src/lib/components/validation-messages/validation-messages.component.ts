@@ -1,11 +1,20 @@
 import {
+  AfterContentInit,
   ChangeDetectorRef,
   Component,
   DoCheck,
+  forwardRef,
   Input,
   OnDestroy,
 } from "@angular/core";
-import { AbstractControl } from "@angular/forms";
+import {
+  AbstractControl,
+  ControlContainer,
+  ControlValueAccessor,
+  FormControl,
+  FormGroup,
+  NG_VALUE_ACCESSOR,
+} from "@angular/forms";
 import { Subject, Subscription } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import { ApiErrorMessage } from "../../resources/interfaces/api-error-message.interface";
@@ -14,10 +23,23 @@ import { ValidationMessagesService } from "../../services/validation-messages.se
 @Component({
   selector: "va-validation-messages",
   templateUrl: "./validation-messages.component.html",
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => ValidationMessagesComponent),
+      multi: true,
+    },
+  ],
 })
-export class ValidationMessagesComponent implements OnDestroy, DoCheck {
+export class ValidationMessagesComponent
+  implements OnDestroy, DoCheck, AfterContentInit, ControlValueAccessor {
+  @Input("control")
+  _control?: AbstractControl;
   @Input()
-  control?: AbstractControl;
+  formControl?: AbstractControl;
+  @Input()
+  formControlName?: string;
+  control: AbstractControl = null;
   errorMessages: string[] = [];
   materialErrorMatcher = false;
   parsedApiErrorMessages: string[] = [];
@@ -30,6 +52,26 @@ export class ValidationMessagesComponent implements OnDestroy, DoCheck {
     | null = null;
   private _multiple = false;
   private ngUnsubscribe: Subject<void> = new Subject<void>();
+
+  ngAfterContentInit() {
+    this.connectControl();
+  }
+
+  private connectControl() {
+    if (
+      this.formControlName &&
+      this.controlContainer &&
+      this.controlContainer.control instanceof FormGroup
+    ) {
+      this.control = (this.controlContainer.control as FormGroup).get(
+        this.formControlName
+      );
+    } else if (this.formControl && this.formControl instanceof FormControl) {
+      this.control = this.formControl;
+    } else if (this._control) {
+      this.control = this._control;
+    }
+  }
 
   get apiErrorMessages():
     | Array<ApiErrorMessage | string>
@@ -73,6 +115,7 @@ export class ValidationMessagesComponent implements OnDestroy, DoCheck {
 
   constructor(
     private cd: ChangeDetectorRef,
+    private controlContainer: ControlContainer,
     private validationMessagesService: ValidationMessagesService
   ) {
     this.unsubscribeAndClearValueChanges = this.unsubscribeAndClearValueChanges.bind(
@@ -169,4 +212,10 @@ export class ValidationMessagesComponent implements OnDestroy, DoCheck {
       }
     }
   }
+
+  registerOnChange(): void {}
+
+  registerOnTouched(): void {}
+
+  writeValue(): void {}
 }
