@@ -2,7 +2,7 @@ import { ArrowFunction, PropertyAccessExpression, SyntaxKind } from "ts-morph";
 import { TypescriptApiUtil } from "./typescript-api.util";
 
 export namespace AngularUtil {
-  export function getLazyLoadedModuleName(loader: ArrowFunction) {
+  export function getLazyLoadedModuleName(loader: ArrowFunction): string {
     const loaderReturns = TypescriptApiUtil.getCallExpressionFromArrowFunction(
       loader
     );

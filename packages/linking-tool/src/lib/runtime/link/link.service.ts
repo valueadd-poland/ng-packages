@@ -59,7 +59,7 @@ export class LinkService {
     let result = "";
     const paramsObject = Object.keys(params);
 
-    if (!!paramsObject.length) {
+    if (paramsObject.length) {
       result = "?";
       paramsObject.forEach((key: string, index: number) => {
         result += `${key}=${params[key]}${

@@ -1,10 +1,10 @@
-import { Rule, SchematicContext, Tree } from "@angular-devkit/schematics";
+import { Rule, Tree } from "@angular-devkit/schematics";
 import { GenerateLinksSchema } from "./resources/interfaces/generate-links-schema.interface";
 import { GenerateLinksService } from "./services/generate-links.service";
 
 export class GenerateLinksSchematics {
   static run(_options: GenerateLinksSchema): Rule {
-    return (tree: Tree, _context: SchematicContext) => {
+    return (tree: Tree): Tree => {
       const resultPath = GenerateLinksSchematics.resolveResultPath(
         _options.resultPath
       );

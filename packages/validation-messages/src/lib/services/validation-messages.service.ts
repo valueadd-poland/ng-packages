@@ -12,7 +12,7 @@ let cache: { [key: string]: string } = {};
 export class ValidationMessagesService {
   private _materialErrorMatcher = false;
   private parser: ValidationMessageParser | null;
-  private templateMatcher: RegExp = /{{(.*)}}+/g;
+  private templateMatcher = /{{(.*)}}+/g;
   private validationMessagesFinalConfig: ValidationMessagesConfig<
     ValidationMessage
   > = {};
