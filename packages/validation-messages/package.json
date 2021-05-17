@@ -22,12 +22,12 @@
     "url": "https://github.com/valueadd-poland/ng-packages/issues"
   },
   "devDependencies": {
-    "@angular/forms": "^11.0.2"
+    "@angular/forms": "^12.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^11.0.2",
-    "@angular/core": "^11.0.2",
-    "rxjs": "^6.5.2"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0",
+    "rxjs": "~6.6.0"
   },
   "ngPackage": {
     "lib": {
