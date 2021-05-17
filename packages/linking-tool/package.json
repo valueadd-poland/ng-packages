@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "lint": "eslint ./src/**/**",
     "build": "ng-packagr -p package.json && tsc -p tsconfig.lib.json",
     "preversion": "npm run build"
   },

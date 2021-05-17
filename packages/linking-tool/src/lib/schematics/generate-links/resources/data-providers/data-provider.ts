@@ -57,7 +57,7 @@ export class DataProvider {
     if (TypescriptApiUtil.isArrayValue(propertyAssignment)) {
       // links passed as an array
       const linksArray = TypescriptApiUtil.getArrayValue(propertyAssignment);
-      return !!linksArray.length
+      return linksArray.length
         ? TypescriptApiUtil.getPropertyName(linksArray[0])
         : "";
     }

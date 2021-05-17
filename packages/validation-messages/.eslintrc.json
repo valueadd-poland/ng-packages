@@ -1,0 +1,22 @@
+{
+  "extends": "../../.eslintrc",
+  "ignorePatterns": ["!**/*"],
+  "rules": {
+    "@angular-eslint/directive-selector": [
+      "error",
+      {
+        "type": "attribute",
+        "prefix": "va",
+        "style": "camelCase"
+      }
+    ],
+    "@angular-eslint/component-selector": [
+      "error",
+      {
+        "type": "element",
+        "prefix": "va",
+        "style": "kebab-case"
+      }
+    ]
+  }
+}
