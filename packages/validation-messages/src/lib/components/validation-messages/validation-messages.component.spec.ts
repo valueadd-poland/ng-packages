@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormControl, Validators } from "@angular/forms";
+import { ControlContainer, FormControl, Validators } from "@angular/forms";
 
 import { ValidationMessagesComponent } from "./validation-messages.component";
 import { ValidationMessagesModule } from "../../validation-messages.module";
@@ -18,6 +18,7 @@ describe("ValidationMessagesComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers: [{ provide: ControlContainer, useValue: {} }],
       imports: [ValidationMessagesModule],
     }).compileComponents();
   }));
