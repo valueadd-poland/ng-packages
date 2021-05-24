@@ -1,3 +1,4 @@
+// @dynamic
 export class SchematicCache {
   private static instance: SchematicCache;
   private cacheOfCaches: { [key: string]: any } = {};
