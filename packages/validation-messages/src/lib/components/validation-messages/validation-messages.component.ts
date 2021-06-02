@@ -5,7 +5,6 @@ import {
   Input,
   OnDestroy,
 } from "@angular/core";
-import { AbstractControl } from "@angular/forms";
 import { Subject, Subscription } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import { ApiErrorMessage } from "../../resources/interfaces/api-error-message.interface";
@@ -17,7 +16,7 @@ import { ValidationMessagesService } from "../../services/validation-messages.se
 })
 export class ValidationMessagesComponent implements OnDestroy, DoCheck {
   @Input()
-  control?: AbstractControl;
+  control?: any;
   errorMessages: string[] = [];
   materialErrorMatcher = false;
   parsedApiErrorMessages: string[] = [];

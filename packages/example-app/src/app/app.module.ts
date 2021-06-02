@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ValidationMessagesModule } from '@valueadd/validation-messages';
+// import { ValidationMessagesModule } from '@valueadd/validation-messages';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ValidationMessagesModule } from '@valueadd/validation-messages';
     AppRoutingModule,
       CommonModule,
       ReactiveFormsModule,
-      ValidationMessagesModule
+      // ValidationMessagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

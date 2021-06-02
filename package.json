@@ -9,7 +9,6 @@
     "format:write": "prettier --write .",
     "postinstall": "npm run lerna bootstrap",
     "lerna": "lerna",
-    "install": "lerna exec npm run install",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "bootstrap": "lerna bootstrap --hoist",

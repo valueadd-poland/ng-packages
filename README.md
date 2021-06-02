@@ -1,3 +1,9 @@
+# GET STARTED 
+1. Install verdaccio 
+   `npm install -g verdaccio`
+2. Run verdaccio and create user (localhost:4873)
+
+
 # ValueAdd Angular Packages
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
