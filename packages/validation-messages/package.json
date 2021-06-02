@@ -1,6 +1,6 @@
 {
   "name": "@valueadd/validation-messages",
-  "version": "2.7.0",
+  "version": "2.7.21",
   "description": "`npm install @valueadd/validation-messages`",
   "author": {
     "email": "contact@valueadd.pl",
@@ -17,22 +17,28 @@
     "test": "jest",
     "lint": "eslint ./src/**/**",
     "build": "ng-packagr -p package.json",
-    "preversion": "npm run build"
+    "preversion": "npm run build",
+    "watch": "tsc --watch",
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/valueadd-poland/ng-packages/issues"
   },
   "devDependencies": {
-    "@angular/forms": "^12.0.0"
+
   },
   "peerDependencies": {
+    "@angular/forms": "^12.0.0",
     "@angular/common": "^12.0.0",
-    "@angular/core": "^12.0.0",
     "rxjs": "~6.6.0"
   },
   "ngPackage": {
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "dist/validation-messages",
     "lib": {
       "entryFile": "src/index.ts"
     }
   }
 }
+
+

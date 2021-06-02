@@ -1,0 +1,69 @@
+<form [formGroup]="form">
+
+    <!--         CASE 1 -->
+        <div>
+            <div formGroupName="person">
+                <input placeholder="age" formControlName="age"/>
+                <h1>
+                    <va-validation-messages
+                            [control]="form.get('person.age')"
+                            [multiple]="true"
+                            [apiErrorMessages]="errors$ | async"
+                    ></va-validation-messages>
+                </h1>
+                <hr>
+            </div>
+        </div>
+
+    <!--         CASE 2 -->
+
+<!--    <div [formGroup]="form.get('person')">-->
+<!--        <input placeholder="age" formControlName="age"/>-->
+<!--        <h1>-->
+<!--            <va-validation-messages-->
+<!--                    formControlName="age"-->
+<!--                    [multiple]="true"-->
+<!--                    [apiErrorMessages]="errors$ | async"-->
+<!--            ></va-validation-messages>-->
+<!--        </h1>-->
+<!--        <hr>-->
+<!--    </div>-->
+
+
+    <!--         CASE 3 -->
+    <!--    <div [formGroup]="form.get('person')">-->
+    <!--        <input placeholder="age" formControlName="age"/>-->
+
+    <!--        <h1>-->
+    <!--            <va-validation-messages-->
+    <!--                    [formControlName]="'age'"-->
+    <!--                    [multiple]="true"-->
+    <!--                    [apiErrorMessages]="errors$ | async"-->
+    <!--            ></va-validation-messages>-->
+    <!--        </h1>-->
+    <!--        <hr>-->
+    <!--    </div>-->
+
+
+    <!--         CASE 4 -->
+    <!--    <div [formGroup]="form.get('person')">-->
+    <!--        <input placeholder="age" formControlName="age"/>-->
+
+    <!--        <h1>-->
+    <!--            <va-validation-messages-->
+    <!--                    [formControl]="form.get('person.age')"-->
+    <!--                    [multiple]="true"-->
+    <!--                    [apiErrorMessages]="errors$ | async"-->
+    <!--            ></va-validation-messages>-->
+    <!--        </h1>-->
+    <!--    </div>-->
+
+</form>
+<hr/>
+<hr/>
+
+<!--<pre>form value: {{ form.value | json }}</pre>-->
+<!--<pre>form errors: {{ form.errors | json }}</pre>-->
+<!--<pre>control valid: {{ form.get("person.age").valid }}</pre>-->
+<!--<pre>control errors: {{ form.get("person.age").errors | json }}</pre>-->
+<!--<pre>errors api: {{ errors$ | async | json }}</pre>-->

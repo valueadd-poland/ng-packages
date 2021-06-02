@@ -9,8 +9,13 @@
     "format:write": "prettier --write .",
     "postinstall": "npm run lerna bootstrap",
     "lerna": "lerna",
+    "install": "lerna exec npm run install",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "bootstrap": "lerna bootstrap --hoist",
+    "start": "lerna run start --stream",
+    "tsc": "lerna run tsc --stream",
+    "watch": "lerna run watch --stream"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
@@ -30,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "@valueadd/dev": "^5.0.0",
+    "@valueadd/validation-messages": "2.7.20",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "jest": "^25.5.4",
