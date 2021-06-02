@@ -14,7 +14,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "validation-messages": [
+        "packages/validation-messages/dist"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

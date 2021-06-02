@@ -10,7 +10,9 @@
     "postinstall": "npm run lerna bootstrap",
     "lerna": "lerna",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "start": "lerna run start",
+    "bootstrap": "lerna bootstrap --hoist"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
