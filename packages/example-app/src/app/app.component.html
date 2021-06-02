@@ -1,20 +1,19 @@
-<!--<form [formGroup]="form">-->
-
-<!--    &lt;!&ndash;         CASE 1 &ndash;&gt;-->
-<!--        <div>-->
-<!--            <div formGroupName="person">-->
-<!--                <input placeholder="age" formControlName="age"/>-->
-<!--                <h1>-->
-<!--                    <va-validation-messages-->
-<!--                            [control]="form.get('person.age')"-->
-<!--                            [multiple]="true"-->
-<!--                            [apiErrorMessages]="errors$ | async"-->
-<!--                    ></va-validation-messages>-->
-<!--                </h1>-->
-<!--                <hr>-->
-<!--            </div>-->
-<!--        </div>-->
-
+<form [formGroup]="form">
+  <!--    &lt;!&ndash;         CASE 1 &ndash;&gt;-->
+  <div>
+    <div formGroupName="person">
+      <input placeholder="age" formControlName="age" />
+      <h1>
+        <va-validation-messages
+          [control]="form.get('person.age')"
+          [multiple]="true"
+          [apiErrorMessages]="errors$ | async"
+        ></va-validation-messages>
+      </h1>
+      <hr />
+    </div>
+  </div>
+</form>
 <!--    &lt;!&ndash;         CASE 2 &ndash;&gt;-->
 
 <!--&lt;!&ndash;    <div [formGroup]="form.get('person')">&ndash;&gt;-->
@@ -28,8 +27,6 @@
 <!--&lt;!&ndash;        </h1>&ndash;&gt;-->
 <!--&lt;!&ndash;        <hr>&ndash;&gt;-->
 <!--&lt;!&ndash;    </div>&ndash;&gt;-->
-
-
 <!--    &lt;!&ndash;         CASE 3 &ndash;&gt;-->
 <!--    &lt;!&ndash;    <div [formGroup]="form.get('person')">&ndash;&gt;-->
 <!--    &lt;!&ndash;        <input placeholder="age" formControlName="age"/>&ndash;&gt;-->
@@ -43,7 +40,6 @@
 <!--    &lt;!&ndash;        </h1>&ndash;&gt;-->
 <!--    &lt;!&ndash;        <hr>&ndash;&gt;-->
 <!--    &lt;!&ndash;    </div>&ndash;&gt;-->
-
 
 <!--    &lt;!&ndash;         CASE 4 &ndash;&gt;-->
 <!--    &lt;!&ndash;    <div [formGroup]="form.get('person')">&ndash;&gt;-->
