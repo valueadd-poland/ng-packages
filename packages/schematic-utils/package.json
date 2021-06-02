@@ -5,17 +5,14 @@
   "keywords": [
     "schematics"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "va-stefanek <mateusz.stefanczyk@valueadd.pl>",
   "homepage": "https://github.com/valueadd-poland/ng-packages",
   "license": "MIT",
-  "main": "lib/index.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
   },
@@ -23,13 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/valueadd-poland/ng-packages.git"
   },
-  "scripts": {
-    "test": "jest",
-    "build": "tsc",
-    "lint": "eslint ./lib/**",
-    "preversion": "npm run build"
-  },
   "bugs": {
     "url": "https://github.com/valueadd-poland/ng-packages/issues"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint ./src/**/**",
+    "preversion": "npm run build"
   }
 }
