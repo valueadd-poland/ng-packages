@@ -96,6 +96,31 @@
           }
         }
       }
+    },
+    "vamsg-lib": {
+      "projectType": "library",
+      "root": "../validation-messages",
+      "sourceRoot": "../validation-messages/src",
+      "prefix": "example-nx",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/validation-messages"],
+          "options": {
+            "jestConfig": "../validation-messages/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "../validation-messages/src/**/*.ts",
+              "../validation-messages/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "example-app"

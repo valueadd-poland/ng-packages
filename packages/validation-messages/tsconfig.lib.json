@@ -13,7 +13,9 @@
     "importHelpers": true,
     "types": [],
     "lib": ["dom", "es2018"],
-    "rootDir": "./src"
   },
-  "exclude": ["**/*.spec.ts"]
+  "exclude": ["**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
+  }
 }

@@ -17,6 +17,7 @@
     "test": "jest",
     "lint": "eslint ./src/**/**",
     "build": "ng-packagr -p package.json",
+    "build-watch": "ng-packagr -p package.json --watch",
     "preversion": "npm run build"
   },
   "bugs": {

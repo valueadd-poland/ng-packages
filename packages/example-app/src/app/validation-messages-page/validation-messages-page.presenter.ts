@@ -2,11 +2,18 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+
+// symlink lib
 import {
   ValidationMessagesConfig,
   ValidationMessagesService,
 } from '@valueadd/validation-messages/dist';
-
+// source code
+// import {  ValidationMessagesConfig,
+//   ValidationMessagesService, } from '@vamsg';
+// dist
+// import { ValidationMessagesConfig,
+//   ValidationMessagesService, } from '@vamsg-dist';
 export interface ApiErrorMessage {
   message: string;
   property: string;

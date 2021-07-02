@@ -14,7 +14,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@vamsg": ["packages/validation-messages/src/index.ts"],
+      "@vamsg-dist": ["packages/validation-messages/dist"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
