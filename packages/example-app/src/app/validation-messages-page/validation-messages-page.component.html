@@ -1,0 +1,16 @@
+<h1>Validation Messages</h1>
+<form [formGroup]="form">
+  <div>
+    <div formGroupName="person">
+      <input placeholder="age" formControlName="age" />
+      <h1>
+        <va-validation-messages
+          [control]="form.get('person.age')"
+          [multiple]="true"
+          [apiErrorMessages]="errors$ | async"
+        ></va-validation-messages>
+      </h1>
+      <hr />
+    </div>
+  </div>
+</form>

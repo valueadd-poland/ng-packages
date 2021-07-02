@@ -10,7 +10,11 @@
     "postinstall": "npm run lerna bootstrap",
     "lerna": "lerna",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "start": "lerna run start --stream",
+    "bootstrap": "lerna bootstrap --hoist",
+    "build-only:val": "lerna run --scope @valueadd/validation-messages build",
+    "restart-app": "npm run build-only:val && lerna run start --stream"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
