@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "source-map": "^0.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.70"
   }
 }
