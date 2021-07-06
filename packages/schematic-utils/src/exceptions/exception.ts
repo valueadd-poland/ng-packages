@@ -68,3 +68,10 @@ export class UnsupportedPlatformException extends BaseException {
     super("This platform is not supported by this code path.");
   }
 }
+export class UnsuccessfulWorkflowExecution extends BaseException {
+  constructor() {
+    super("Workflow did not execute successfully.");
+  }
+}
+
+export class SchematicsException extends BaseException {}

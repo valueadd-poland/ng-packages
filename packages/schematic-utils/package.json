@@ -30,6 +30,10 @@
     "preversion": "npm run build"
   },
   "dependencies": {
+    "@nrwl/cli": "^12.5.6",
     "source-map": "^0.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.70"
   }
 }
