@@ -26,7 +26,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.json",
-    "lint": "eslint ./src/**/**",
+    "lint": "eslint ./src/**/** --ignore-pattern '*.spec.ts'",
     "preversion": "npm run build"
   },
   "dependencies": {
