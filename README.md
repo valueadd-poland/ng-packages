@@ -17,7 +17,13 @@ A collection of packages, modules and utilities for JavaScript developers.
 ### Setup
 
 - `$ npm install`
-- `$ npm run lerna bootstrap`
+
+### Debugging library
+
+#### Run Example app
+- `npm run start-watch:vamsg` The library is built in hot reload mode
+- `npm run start-app` Dependencies for example app are built and linked to app, then the app is run 
+
 
 ### Publish packages
 

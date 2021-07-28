@@ -16,7 +16,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src/**/**",
-    "build": "ng-packagr -p package.json",
+    "build": "ng-packagr -p package.json -c tsconfig.lib.json",
+    "build-watch": "npm run build -- --watch",
     "preversion": "npm run build"
   },
   "bugs": {
@@ -34,5 +35,8 @@
     "lib": {
       "entryFile": "src/index.ts"
     }
+  },
+  "angular": {
+    "compilationMode": "partial"
   }
 }

@@ -53,6 +53,7 @@
         "linking-tool",
         "translation-finder",
         "schematic-utils",
+        "example-app",
       ],
     ],
   },
