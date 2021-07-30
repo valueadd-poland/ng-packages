@@ -1,8 +1,10 @@
-import { json, virtualFs, workspaces } from "@angular-devkit/core";
+import * as workspaces from "../workspace";
+import * as json from "../json/interface";
 import { ProjectType } from "./workspace-models";
 import { Tree } from "../tree/interface";
 import { Rule } from "../engine/interface";
 import { noop } from "./runtime";
+import { virtualFs } from "../virtual-fs";
 
 function createHost(tree: Tree): workspaces.WorkspaceHost {
   return {

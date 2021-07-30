@@ -1,6 +1,6 @@
-import { normalize } from "@angular-devkit/core";
 import { SimpleFileEntry } from "./entry";
 import { UpdateRecorderBase, UpdateRecorderBom } from "./recorder";
+import { normalize } from "../virtual-fs";
 
 describe("UpdateRecorderBase", () => {
   it("works for simple files", () => {

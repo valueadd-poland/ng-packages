@@ -1,4 +1,3 @@
-import { Path } from "@angular-devkit/core";
 import {
   ModuleOptions,
   buildRelativePath,
@@ -7,6 +6,7 @@ import {
 } from "./find-module";
 import { Tree } from "../tree/interface";
 import { EmptyTree } from "../tree/empty";
+import { Path } from "../virtual-fs/path";
 
 describe("find-module", () => {
   describe("findModule", () => {

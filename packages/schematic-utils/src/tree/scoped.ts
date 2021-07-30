@@ -1,11 +1,3 @@
-import {
-  NormalizedRoot,
-  Path,
-  PathFragment,
-  join,
-  normalize,
-  relative,
-} from "@angular-devkit/core";
 import { Action } from "./action";
 import {
   DirEntry,
@@ -17,6 +9,14 @@ import {
   UpdateRecorder,
 } from "./interface";
 import { DelegateTree } from "./delegate";
+import {
+  join,
+  normalize,
+  NormalizedRoot,
+  Path,
+  PathFragment,
+  relative,
+} from "../virtual-fs";
 
 class ScopedFileEntry implements FileEntry {
   constructor(private _base: FileEntry, private scope: Path) {}

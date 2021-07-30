@@ -1,3 +1,11 @@
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 import {
   Observable,
   Operator,
@@ -36,7 +44,7 @@ export class Logger extends Observable<LogEntry> implements LoggerApi {
   private _obs: Observable<LogEntry> = empty();
   private _subscription: Subscription | null = null;
 
-  protected get _observable(): Observable<LogEntry> {
+  protected get _observable() {
     return this._obs;
   }
   protected set _observable(v: Observable<LogEntry>) {
@@ -90,28 +98,28 @@ export class Logger extends Observable<LogEntry> implements LoggerApi {
 
   asApi(): LoggerApi {
     return {
-      createChild: (name: string): Logger => this.createChild(name),
-      log: (level: LogLevel, message: string, metadata?: JsonObject): void => {
+      createChild: (name: string) => this.createChild(name),
+      log: (level: LogLevel, message: string, metadata?: JsonObject) => {
         return this.log(level, message, metadata);
       },
-      debug: (message: string, metadata?: JsonObject): void =>
+      debug: (message: string, metadata?: JsonObject) =>
         this.debug(message, metadata),
-      info: (message: string, metadata?: JsonObject): void =>
+      info: (message: string, metadata?: JsonObject) =>
         this.info(message, metadata),
-      warn: (message: string, metadata?: JsonObject): void =>
+      warn: (message: string, metadata?: JsonObject) =>
         this.warn(message, metadata),
-      error: (message: string, metadata?: JsonObject): void =>
+      error: (message: string, metadata?: JsonObject) =>
         this.error(message, metadata),
-      fatal: (message: string, metadata?: JsonObject): void =>
+      fatal: (message: string, metadata?: JsonObject) =>
         this.fatal(message, metadata),
     };
   }
 
-  createChild(name: string): Logger {
+  createChild(name: string) {
     return new (this.constructor as typeof Logger)(name, this);
   }
 
-  complete(): void {
+  complete() {
     this._subject.complete();
   }
 
@@ -127,23 +135,23 @@ export class Logger extends Observable<LogEntry> implements LoggerApi {
     this._subject.next(entry);
   }
 
-  debug(message: string, metadata: JsonObject = {}): void {
+  debug(message: string, metadata: JsonObject = {}) {
     return this.log("debug", message, metadata);
   }
-  info(message: string, metadata: JsonObject = {}): void {
+  info(message: string, metadata: JsonObject = {}) {
     return this.log("info", message, metadata);
   }
-  warn(message: string, metadata: JsonObject = {}): void {
+  warn(message: string, metadata: JsonObject = {}) {
     return this.log("warn", message, metadata);
   }
-  error(message: string, metadata: JsonObject = {}): void {
+  error(message: string, metadata: JsonObject = {}) {
     return this.log("error", message, metadata);
   }
-  fatal(message: string, metadata: JsonObject = {}): void {
+  fatal(message: string, metadata: JsonObject = {}) {
     return this.log("fatal", message, metadata);
   }
 
-  toString(): string {
+  toString() {
     return `<Logger(${this.name})>`;
   }
 
@@ -158,7 +166,11 @@ export class Logger extends Observable<LogEntry> implements LoggerApi {
     error?: (error: Error) => void,
     complete?: () => void
   ): Subscription;
-  subscribe(): Subscription {
+  subscribe(
+    _observerOrNext?: PartialObserver<LogEntry> | ((value: LogEntry) => void),
+    _error?: (error: Error) => void,
+    _complete?: () => void
+  ): Subscription {
     // eslint-disable-next-line prefer-spread
     return this._observable.subscribe.apply(
       this._observable,

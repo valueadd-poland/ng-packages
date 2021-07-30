@@ -26,10 +26,12 @@
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.json",
-    "lint": "eslint ./src/**/** --ignore-pattern '*.spec.ts'",
+    "lint": "eslint \"./src/**/**\"",
     "preversion": "npm run build"
   },
   "dependencies": {
+    "ajv": "^8.6.2",
+    "ajv-formats": "^2.1.0",
     "source-map": "^0.7.3"
   },
   "devDependencies": {

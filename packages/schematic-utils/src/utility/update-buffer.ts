@@ -1,5 +1,5 @@
-import { BaseException } from "@angular-devkit/core";
 import { LinkedList } from "./linked-list";
+import { BaseException } from "../exceptions/exception";
 
 export class IndexOutOfBoundException extends BaseException {
   constructor(index: number, min: number, max = Infinity) {

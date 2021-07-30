@@ -1,7 +1,7 @@
-import { normalize } from "@angular-devkit/core";
 import { forEach } from "./base";
 import { FilePredicate } from "../../tree/interface";
 import { Rule } from "../../engine/interface";
+import { normalize } from "../../virtual-fs/path";
 
 export function rename(
   match: FilePredicate<boolean>,

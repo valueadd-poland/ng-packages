@@ -1,13 +1,11 @@
-import {
-  BaseException,
-  normalize,
-  template as templateImpl,
-} from "@angular-devkit/core";
+import { template as templateImpl } from "../template";
 import { TextDecoder } from "util";
 import { chain, composeFileOperators, forEach, when } from "./base";
 import { rename } from "./rename";
 import { FileOperator, Rule } from "../../engine/interface";
 import { FileEntry } from "../../tree/interface";
+import { BaseException } from "../../exceptions/exception";
+import { normalize } from "../../virtual-fs/path";
 
 export const TEMPLATE_FILENAME_RE = /\.template$/;
 

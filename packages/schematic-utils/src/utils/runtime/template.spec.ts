@@ -1,19 +1,19 @@
-import { normalize } from "@angular-devkit/core";
-import { UnitTestTree } from "@angular-devkit/schematics/testing";
 import { of as observableOf } from "rxjs";
 
 import {
-  InvalidPipeException,
-  OptionIsNotDefinedException,
-  UnknownPipeException,
   applyContentTemplate,
   applyPathTemplate,
   applyTemplates,
+  InvalidPipeException,
+  OptionIsNotDefinedException,
+  UnknownPipeException,
 } from "./template";
 import { FileEntry, MergeStrategy, Tree } from "../../tree/interface";
 import { SchematicContext } from "../../engine/interface";
-import { HostTree } from "@angular-devkit/schematics";
 import { callRule } from "./call";
+import { normalize } from "../../virtual-fs/path";
+import { UnitTestTree } from "../../tree/unit-test-tree";
+import { HostTree } from "../../tree/host-tree";
 
 function _entry(path?: string, content?: string): FileEntry {
   if (!path) {

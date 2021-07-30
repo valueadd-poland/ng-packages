@@ -1,4 +1,4 @@
-import { normalize, virtualFs } from "@angular-devkit/core";
+import { normalize, virtualFs } from "../virtual-fs";
 import { FilterHostTree, HostTree } from "./host-tree";
 import { MergeStrategy } from "./interface";
 

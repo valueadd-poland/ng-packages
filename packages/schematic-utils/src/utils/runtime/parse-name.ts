@@ -1,4 +1,10 @@
-import { basename, dirname, join, normalize, Path } from "@angular-devkit/core";
+import {
+  basename,
+  dirname,
+  join,
+  normalize,
+  Path,
+} from "../../virtual-fs/path";
 
 export interface Location {
   name: string;

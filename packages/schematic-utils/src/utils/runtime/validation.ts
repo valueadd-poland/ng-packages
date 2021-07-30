@@ -1,4 +1,4 @@
-import { tags } from "@angular-devkit/core";
+import * as tags from "./literals";
 import { SchematicsException } from "../../exceptions/exception";
 
 export function validateName(name: string): void {

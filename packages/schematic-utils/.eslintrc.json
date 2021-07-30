@@ -1,5 +1,11 @@
 {
   "extends": "../../.eslintrc",
   "rules": {},
-  "ignorePatterns": ["!**/*"]
+  "ignorePatterns": [
+    "*.spec.ts",
+    "**/virtual-fs/*",
+    "**/workspace/*",
+    "**/logger/*",
+    "**/analytics/*"
+  ]
 }

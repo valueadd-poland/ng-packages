@@ -1,9 +1,9 @@
-import { normalize } from "@angular-devkit/core";
-import { SchematicsException } from "@angular-devkit/schematics";
 import { dirname } from "path";
 import * as ts from "typescript";
 import { findNode, getSourceNodes } from "./ast-utils";
 import { Tree } from "../tree/interface";
+import { SchematicsException } from "../exceptions/exception";
+import { normalize } from "../virtual-fs/path";
 
 export function findBootstrapModuleCall(
   host: Tree,

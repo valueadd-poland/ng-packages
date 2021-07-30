@@ -1,4 +1,4 @@
-import { UnitTestTree } from "@angular-devkit/schematics/testing";
+import { UnitTestTree } from "../tree/unit-test-tree";
 
 export function createAppModule(
   tree: UnitTestTree,

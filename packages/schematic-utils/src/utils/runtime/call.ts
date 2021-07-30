@@ -1,14 +1,15 @@
-import { BaseException, isPromise } from "@angular-devkit/core";
 import {
-  Observable,
   from,
   isObservable,
+  Observable,
   of as observableOf,
   throwError,
 } from "rxjs";
 import { defaultIfEmpty, last, mergeMap, tap } from "rxjs/operators";
 import { Tree, TreeSymbol } from "../../tree/interface";
 import { Rule, SchematicContext, Source } from "../../engine/interface";
+import { BaseException } from "../../exceptions/exception";
+import { isPromise } from "./lang";
 
 function _getTypeOfResult(value?: any): string {
   if (value === undefined) {

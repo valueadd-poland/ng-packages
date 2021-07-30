@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { logging } from "@angular-devkit/core";
+import * as logging from "../logger";
 
 export interface RequiredWorkflowExecutionContext {
   collection: string;

@@ -1,4 +1,4 @@
-import { normalize, split } from "@angular-devkit/core";
+import { normalize, split } from "../../virtual-fs";
 
 export function relativePathToWorkspaceRoot(
   projectRoot: string | undefined

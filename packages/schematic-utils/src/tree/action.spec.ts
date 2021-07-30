@@ -1,5 +1,5 @@
-import { normalize } from "@angular-devkit/core";
 import { ActionList } from "./action";
+import { normalize } from "../virtual-fs";
 
 describe("Action", () => {
   describe("optimize", () => {
