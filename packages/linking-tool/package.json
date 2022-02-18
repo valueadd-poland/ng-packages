@@ -46,5 +46,8 @@
       "entryFile": "src/index.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
   "gitHead": "905ffc2b3f1a16e1fc5ae76be39ed4b8c1629048"
 }
