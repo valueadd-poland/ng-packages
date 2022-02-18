@@ -1,12 +1,9 @@
 {
   "name": "schematic-utils",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Set of utils to build schematics",
   "keywords": [
     "schematics"
-  ],
-  "files": [
-    "dist"
   ],
   "author": "va-stefanek <mateusz.stefanczyk@valueadd.pl>",
   "homepage": "https://github.com/valueadd-poland/ng-packages",
