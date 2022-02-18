@@ -1,6 +1,6 @@
 {
   "name": "@valueadd/linking-tool",
-  "version": "2.8.14",
+  "version": "2.8.15",
   "schematics": "./lib/schematics/collection.json",
   "description": "Generate links for routing across the app",
   "homepage": "https://github.com/valueadd-poland/ng-packages",
@@ -49,5 +49,5 @@
   "files": [
     "./dist"
   ],
-  "gitHead": "6db7f992ef9f7f36ed8d71366a777625419d5405"
+  "gitHead": "a5c018e71712ef04819b035780410a6e3645ef00"
 }
