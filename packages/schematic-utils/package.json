@@ -1,6 +1,6 @@
 {
   "name": "schematic-utils",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Set of utils to build schematics",
   "keywords": [
     "schematics"
@@ -35,5 +35,5 @@
   "devDependencies": {
     "@types/node": "^12.12.70"
   },
-  "gitHead": "60083e1dec0e83b9917d5e11e8b45f7b4e5d308d"
+  "gitHead": "473efb011c5ece370d094cf7b8eeea92672b6abf"
 }
