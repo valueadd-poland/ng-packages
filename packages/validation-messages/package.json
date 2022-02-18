@@ -1,6 +1,6 @@
 {
   "name": "@valueadd/validation-messages",
-  "version": "2.8.10",
+  "version": "2.8.11",
   "description": "`npm install @valueadd/validation-messages`",
   "author": {
     "email": "contact@valueadd.pl",
@@ -35,5 +35,5 @@
       "entryFile": "src/index.ts"
     }
   },
-  "gitHead": "45bb8aa84ec2f5c791802fcf7c3ae47d5012c52d"
+  "gitHead": "01ff29a15826268f4eca5b87438687467a3ac8b4"
 }
