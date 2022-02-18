@@ -45,5 +45,9 @@
     "lib": {
       "entryFile": "src/index.ts"
     }
-  }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "gitHead": "60083e1dec0e83b9917d5e11e8b45f7b4e5d308d"
 }
