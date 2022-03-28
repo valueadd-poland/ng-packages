@@ -1,4 +1,4 @@
-import { Path, PathFragment } from "@angular-devkit/core";
+import { Path, PathFragment } from "../virtual-fs";
 import { Action } from "./action";
 
 export enum MergeStrategy {

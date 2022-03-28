@@ -1,4 +1,3 @@
-import { BaseException, isPromise } from "@angular-devkit/core";
 import {
   Observable,
   from,
@@ -9,6 +8,8 @@ import {
 import { defaultIfEmpty, last, mergeMap, tap } from "rxjs/operators";
 import { Rule, SchematicContext, Source } from "../engine/interface";
 import { Tree, TreeSymbol } from "../tree/interface";
+import { isPromise } from "../utils/runtime";
+import { BaseException } from "../exceptions/exception";
 
 function _getTypeOfResult(value?: any): string {
   if (value === undefined) {

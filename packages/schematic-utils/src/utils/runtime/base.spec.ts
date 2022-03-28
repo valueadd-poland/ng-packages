@@ -1,12 +1,12 @@
-import { HostTree, MergeStrategy } from "@angular-devkit/schematics";
 import { of as observableOf } from "rxjs";
 import { apply, applyToSubtree, chain } from "./base";
 import { Rule, SchematicContext, Source } from "../../engine/interface";
-import { Tree } from "../../tree/interface";
+import { MergeStrategy, Tree } from "../../tree/interface";
 import { callSource } from "../../rules/call";
 import { callRule } from "./call";
 import { empty } from "../../tree/static";
 import { move } from "./move";
+import { HostTree } from "../../tree/host-tree";
 
 const context: SchematicContext = ({
   engine: null,

@@ -5,17 +5,6 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-
-import {
-  Path,
-  PathFragment,
-  PathIsDirectoryException,
-  PathIsFileException,
-  dirname,
-  join,
-  normalize,
-  virtualFs,
-} from "@angular-devkit/core";
 import { EMPTY, Observable } from "rxjs";
 import { concatMap, map, mergeMap } from "rxjs/operators";
 import {
@@ -45,9 +34,19 @@ import {
   FileDoesNotExistException,
   InvalidUpdateRecordException,
   MergeConflictException,
+  PathIsDirectoryException,
+  PathIsFileException,
   SchematicsException,
 } from "../exceptions/exception";
 import { LazyFileEntry } from "./entry";
+import {
+  dirname,
+  join,
+  normalize,
+  Path,
+  PathFragment,
+  virtualFs,
+} from "../virtual-fs";
 
 let _uniqueId = 0;
 
@@ -64,6 +63,7 @@ export class HostDirEntry implements DirEntry {
       .list(this.path)
       .filter((fragment) => this._host.isDirectory(join(this.path, fragment)));
   }
+
   get subfiles(): PathFragment[] {
     return this._host
       .list(this.path)
@@ -73,6 +73,7 @@ export class HostDirEntry implements DirEntry {
   dir(name: PathFragment): DirEntry {
     return this._tree.getDir(join(this.path, name));
   }
+
   file(name: PathFragment): FileEntry | null {
     return this._tree.get(join(this.path, name));
   }
@@ -311,6 +312,7 @@ export class HostTree implements Tree {
 
     return entry ? entry.content : null;
   }
+
   exists(path: string): boolean {
     return this._recordSync.isFile(this._normalizePath(path));
   }
@@ -351,6 +353,7 @@ export class HostTree implements Tree {
 
     return maybeCache;
   }
+
   visit(visitor: FileVisitor): void {
     this.root.visit((path, entry) => {
       visitor(path, entry);
@@ -366,6 +369,7 @@ export class HostTree implements Tree {
     const c = typeof content == "string" ? Buffer.from(content) : content;
     this._record.overwrite(p, (c as any) as virtualFs.FileBuffer).subscribe();
   }
+
   beginUpdate(path: string): UpdateRecorder {
     const entry = this.get(path);
     if (!entry) {
@@ -374,6 +378,7 @@ export class HostTree implements Tree {
 
     return UpdateRecorderBase.createFromFileEntry(entry);
   }
+
   commitUpdate(record: UpdateRecorder): void {
     if (record instanceof UpdateRecorderBase) {
       const path = record.path;
@@ -400,9 +405,11 @@ export class HostTree implements Tree {
     const c = typeof content == "string" ? Buffer.from(content) : content;
     this._record.create(p, (c as any) as virtualFs.FileBuffer).subscribe();
   }
+
   delete(path: string): void {
     this._recordSync.delete(this._normalizePath(path));
   }
+
   rename(from: string, to: string): void {
     this._recordSync.rename(this._normalizePath(from), this._normalizePath(to));
   }

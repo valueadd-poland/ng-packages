@@ -1,4 +1,5 @@
-import { BaseException, Path } from "@angular-devkit/core";
+import { BaseException } from "../exceptions/exception";
+import { Path } from "../virtual-fs";
 
 export class UnknownActionException extends BaseException {
   constructor(action: Action) {

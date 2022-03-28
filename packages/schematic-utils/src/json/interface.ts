@@ -1,3 +1,11 @@
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 export interface Position {
   readonly offset: number;
 
@@ -38,6 +46,7 @@ export interface JsonAstIdentifier extends JsonAstNodeBase {
   readonly value: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface JsonArray extends Array<JsonValue> {}
 
 export interface JsonAstArray extends JsonAstNodeBase {

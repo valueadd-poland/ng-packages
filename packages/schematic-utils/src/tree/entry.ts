@@ -1,5 +1,5 @@
-import { Path } from "@angular-devkit/core";
 import { FileEntry } from "./interface";
+import { Path } from "../virtual-fs";
 
 export class SimpleFileEntry implements FileEntry {
   constructor(private _path: Path, private _content: Buffer) {}

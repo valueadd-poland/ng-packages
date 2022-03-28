@@ -1,4 +1,5 @@
-import { analytics, logging } from "@angular-devkit/core";
+import * as logging from "../logger";
+import * as analytics from "../analytics";
 import { Observable } from "rxjs";
 import { Url } from "url";
 import { FileEntry, MergeStrategy, Tree } from "../tree/interface";

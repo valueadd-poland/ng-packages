@@ -1,13 +1,12 @@
+import { DirEntry, Tree } from "../tree/interface";
 import {
-  NormalizedRoot,
-  Path,
   dirname,
   join,
   normalize,
+  NormalizedRoot,
+  Path,
   relative,
-} from "@angular-devkit/core";
-import { DirEntry } from "@angular-devkit/schematics";
-import { Tree } from "../tree/interface";
+} from "../virtual-fs/path";
 
 export interface ModuleOptions {
   module?: string;
