@@ -22,12 +22,10 @@
   "bugs": {
     "url": "https://github.com/valueadd-poland/ng-packages/issues"
   },
-  "devDependencies": {
-    "@angular/forms": "^12.0.0"
-  },
   "peerDependencies": {
-    "@angular/common": "^12.0.0",
-    "@angular/core": "^12.0.0",
+    "@angular/common": "^13.2.7",
+    "@angular/core": "^13.2.7",
+    "@angular/forms": "^13.2.7",
     "rxjs": "~6.6.0"
   },
   "ngPackage": {
@@ -35,5 +33,8 @@
       "entryFile": "src/index.ts"
     }
   },
-  "gitHead": "60083e1dec0e83b9917d5e11e8b45f7b4e5d308d"
+  "gitHead": "60083e1dec0e83b9917d5e11e8b45f7b4e5d308d",
+  "devDependencies": {
+    "ng-packagr": "^13.0.0"
+  }
 }
