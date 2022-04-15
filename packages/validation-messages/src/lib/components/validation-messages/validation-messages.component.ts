@@ -155,7 +155,10 @@ export class ValidationMessagesComponent implements OnDestroy, DoCheck {
     if (this.control && this.control.errors) {
       for (const propertyName in this.control.errors) {
         if (
-          Object.prototype.hasOwnProperty.call(this.control, propertyName) &&
+          Object.prototype.hasOwnProperty.call(
+            this.control.errors,
+            propertyName
+          ) &&
           propertyName !== "server" &&
           !(!this.multiple && this.errorMessages.length === 1)
         ) {
